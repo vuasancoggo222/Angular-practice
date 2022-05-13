@@ -6,6 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  buttonShowHide = false;
+  changeStatus(){
+    console.log(this);
+    
+    this.buttonShowHide = !this.buttonShowHide;
+  }
   title = 'product';
   nav = "this is a navigation !!"
   students = [
@@ -63,5 +69,9 @@ avatarUrl: 'https://i.picsum.photos/id/408/200/200.jpg?hmac=VJjKULX_XeyV5C9mbWyv
   status = false;
   share() {
     window.alert('The product has been shared!');
+  }
+  onChange(){
+    console.log(this);
+    
   }
 }

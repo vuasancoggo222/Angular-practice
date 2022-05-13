@@ -1,6 +1,7 @@
 <h1>Danh sách giảng viên</h1>
 <div class="container">
   <p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
-<app-table [users]="teachers"></app-table>
+  <button class="btn btn-primary" (click)="changeStatus()">{{ buttonShowHide ? 'Hide' : 'Show' }}</button>
+  <app-table *ngIf="buttonShowHide" [users]="teachers"></app-table>
 
 </div>
