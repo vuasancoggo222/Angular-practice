@@ -6,11 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./name.component.css']
 })
 export class NameComponent implements OnInit {
-  
-  change(){
-    console.log(this);
-    this.name = Math.random().toString();
-  }
   @Input() name: string;
   constructor() {
     this.name = '';
