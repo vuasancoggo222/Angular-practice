@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Avatar</th>
+      <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let teacher of teachers; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        <app-name [name]="teacher.name"></app-name>
+      </td>
+      <td>{{ teacher.age | number }}</td>
+      <td><app-gender [gender]="teacher.gender"></app-gender></td>
+      <td><app-avatar [age]="teacher.age" [avatar]="teacher.avatarUrl"></app-avatar></td>
+      <td><app-status [status]="teacher.status"></app-status></td>
+      
+    </tr>
+    </tbody>
+  </table>
