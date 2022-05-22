@@ -13,6 +13,7 @@ import { AvatarComponent } from './avatar/avatar.component';
 import {FormsModule} from "@angular/forms";
 import { FormComponent } from './form/form.component';
 import { FormItemComponent } from './form-item/form-item.component';
+import { AgeComponent } from './age/age.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { FormItemComponent } from './form-item/form-item.component';
     AvatarComponent,
     FormComponent,
     FormItemComponent,
+    AgeComponent,
   ],
   imports: [
     BrowserModule,

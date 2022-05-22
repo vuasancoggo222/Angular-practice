@@ -53,7 +53,7 @@ export class FormComponent implements OnInit {
     {
       id: '6',
       name: 'John Sttella',
-      age: 28,
+      age: 48,
       email: 'james@gmail.com',
       sdt: '0376543567',
       avatarUrl:
