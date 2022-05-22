@@ -6,24 +6,28 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NameComponent } from './name/name.component';
-import { TableComponent } from './table/table.component';
+
 import { GenderComponent } from './gender/gender.component';
 import { StatusComponent } from './status/status.component';
 import { AvatarComponent } from './avatar/avatar.component';
-
+import {FormsModule} from "@angular/forms";
+import { FormComponent } from './form/form.component';
+import { FormItemComponent } from './form-item/form-item.component';
 @NgModule({
   declarations: [
     AppComponent,
     NameComponent,
-    TableComponent,
     GenderComponent,
     StatusComponent,
-    AvatarComponent
+    AvatarComponent,
+    FormComponent,
+    FormItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

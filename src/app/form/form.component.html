@@ -1,0 +1,62 @@
+<p>{{userForm.value| json}}</p>
+<form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <input type="hidden" name="id" [(ngModel)]="inputValues.id">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input  type="text" [(ngModel)]="inputValues.name" name="name" class="form-control" id="exampleInputEmail1"  aria-describedby="emailHelp" ngModel required #name="ngModel" minlength="5">
+      <app-form-item key="Tên" [field]="name"></app-form-item>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Age</label>
+      <input ngModel #age="ngModel" [(ngModel)]="inputValues.age" type="number" name="age" class="form-control" id="exampleInputPassword1" min="1" max="100">
+      <app-form-item key="Tuổi" [field]="age"></app-form-item>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Email</label>
+      <input ngModel #email="ngModel" [(ngModel)]="inputValues.email" type="email" name="email" class="form-control" id="exampleInputPassword1" required email>
+      <app-form-item key="Email" [field]="email"></app-form-item>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+      <input ngModel #sdt="ngModel" [(ngModel)]="inputValues.sdt" type="text" name="sdt" class="form-control" id="exampleInputPassword1" required minlength="10" maxlength="11">
+      <app-form-item key="SDT" [field]="sdt"></app-form-item>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Avatar </label>
+      <input type="text" class="form-control" [(ngModel)]="inputValues.avatarUrl" id="exampleInputEmail1" aria-describedby="emailHelp" min="10" #avatarUrl="ngModel" ngModel name="avatarUrl" >
+      <app-form-item key="Avatar" [field]="avatarUrl"></app-form-item>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+  </form>
+  <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Avatar</th>
+        <th colspan="2"scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+  
+            {{ user.name }}
+          </td>
+          <td>{{ user.age  }}</td>
+          <td>{{ user.email  }}</td>
+          <td>{{ user.sdt  }}</td>
+          <td><img src="{{user.avatarUrl}}" alt=""></td>
+          <td><button class="btn btn-primary" (click)="onEdit(user)">Sửa</button></td>
+          <td><button class="btn btn-danger" (click)="onDelete(user.id)">Xoá</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  
+
