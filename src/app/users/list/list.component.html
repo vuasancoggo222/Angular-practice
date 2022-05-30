@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Avatar</th>
+      <th colspan="2"scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let user of users; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td><app-name [name]="user.name"></app-name></td>
+        <td><app-age [age]="user.age"></app-age></td>
+        <td>{{ user.email  }}</td>
+        <td>{{ user.sdt  }}</td>
+        <td><app-avatar [age]="user.age" [avatar]="user.avatarUrl"></app-avatar></td>
+        <td><button class="btn btn-primary" (click)="onEdit(user.id)">Sửa</button></td>
+        <td><button class="btn btn-danger" (click)="onDelete(user.id)">Xoá</button></td>
+      </tr>
+    </tbody>
+  </table>
+

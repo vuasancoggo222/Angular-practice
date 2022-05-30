@@ -1,4 +1,4 @@
-<!-- <p>{{userForm.value| json}}</p>
+<p>{{userForm.value| json}}</p>
 <form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <input type="hidden" name="id" [(ngModel)]="inputValues.id">
     <div class="mb-3">
@@ -28,33 +28,3 @@
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
   </form>
-  <div>
-    <table class="table">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone Number</th>
-        <th scope="col">Avatar</th>
-        <th colspan="2"scope="col">Action</th>
-      </tr>
-      </thead>
-      <tbody>
-        
-        <tr *ngFor="let user of users; index as i">
-          <th scope="row">{{ i + 1 }}</th>
-          <td><app-name [name]="user.name"></app-name></td>
-          <td><app-age [age]="user.age"></app-age></td>
-          <td>{{ user.email  }}</td>
-          <td>{{ user.sdt  }}</td>
-          <td><app-avatar [age]="user.age" [avatar]="user.avatarUrl"></app-avatar></td>
-          <td><button class="btn btn-primary" (click)="onEdit(user)">Sửa</button></td>
-          <td><button class="btn btn-danger" (click)="onDelete(user.id)">Xoá</button></td>
-        </tr>
-      </tbody>
-    </table>
-    
-  
- -->

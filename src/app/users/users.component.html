@@ -1,0 +1,6 @@
+<a href="" class="btn btn-primary">ADD</a>
+<app-form-users (handleSubmit)="onParentSubmit($event)"
+[inputValues]="formValues"></app-form-users>
+<app-list [users]="users"
+(handleDelete)="onParentDelete($event)"
+(handleEdit)="onParentEdit($event)"></app-list>

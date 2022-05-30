@@ -14,6 +14,12 @@ import {FormsModule} from "@angular/forms";
 import { FormComponent } from './form/form.component';
 import { FormItemComponent } from './form-item/form-item.component';
 import { AgeComponent } from './age/age.component';
+import { UsersComponent } from './users/users.component';
+import { ListComponent } from './users/list/list.component';
+import { FormUsersComponent } from './users/form-users/form-users.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { HomeComponent } from './home/home.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +30,12 @@ import { AgeComponent } from './age/age.component';
     FormComponent,
     FormItemComponent,
     AgeComponent,
+    UsersComponent,
+    ListComponent,
+    FormUsersComponent,
+    ClientLayoutComponent,
+    HomeComponent,
+    AdminLayoutComponent,
   ],
   imports: [
     BrowserModule,
